@@ -1,18 +1,14 @@
 # Flask-leaflet-example
 Application Flask leaflet 
 
-##Créer un virtualenv:
-
+Créer un virtualenv:
 `virtualenv -p python3 venv`
 
-##Activer virtualenv:
-
+Activer virtualenv:
 `source venv/bin/activate`
 
-##Installer les librairies python:
-
+Installer les librairies python:
 `pip install -r requierement.txt`
 
-##Lancer l'application:
-
+Lancer l'application:
 `python run.py`
