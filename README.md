@@ -1,33 +1,41 @@
 # Flask-leaflet-example
-Application Flask leaflet 
 
-Créer une base de données PostgresSQL:
-`sudo apt.get install postgressql`
+Application Python Flask Leaflet comprenant un formulaire et une carte affichant les données saisies dans le formulaire.
 
-Devenir utilisateur Postgres:
+Créer une base de données PostgreSQL :
+
+`sudo apt-get install postgresql`
+
+Se connecter avec l'utilisateur ``postgres`` :
+
 `su postgres`
 
-Créer un utilisateur PostgresSqL:
+Créer un utilisateur PostgreSQL :
+
 `create user myuser with encrypted password 'mypass'`
 
-Créer la base de données:
+Créer la base de données :
+
 `createdb testdb`
 
-Créer un virtualenv:
+Créer un virtualenv :
+
 `virtualenv -p python3 venv`
 
-Activer virtualenv:
+Activer virtualenv :
+
 `source venv/bin/activate`
 
-Installer les librairies python:
+Installer les librairies python :
+
 `pip install -r requirements.txt`
 
-Adapter le fichier `app/routes.py` en y mettant vos identifiant de BDD
+Adapter le fichier `app/routes.py` en y mettant vos identifiants de connexion à la BDD
 
-Lancer l'application:
+Lancer l'application :
+
 `python run.py`
 
+Auteur : Titouan Bertochio / Juin 2019
 
-Fait à partir du tuto:"https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates"
-
-par Bertochio Titouan
+Fait à partir du tutoriel https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates
