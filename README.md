@@ -8,7 +8,7 @@ Devenir utilisateur Postgres:
 `su postgres`
 
 Créer un utilisateur PostgresSqL:
-`createuser testuser`
+`create user myuser with encrypted password 'mypass'`
 
 Créer la base de données:
 `createdb testdb`
@@ -26,3 +26,7 @@ Adapter le fichier `app/routes.py` en y mettant vos identifiant de BDD
 
 Lancer l'application:
 `python run.py`
+
+
+Fait à partir du tuto:"https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates"
+par Bertochio Titouan
