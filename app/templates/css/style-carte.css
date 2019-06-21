@@ -1,0 +1,33 @@
+.title{
+	text-align:center;
+
+}
+
+.code{
+	background: lightgrey;
+
+}
+
+.soluce{
+	background-color:grey;
+	text-align: center;
+	
+}
+
+#map{
+	width: 1500px;
+	text-align: center;
+}
+
+pre {
+	background-color: lightgrey;
+	padding: 20px;
+	margin: solid 1px;
+}
+.button{
+	button-align:right;
+
+}
+.etape{
+	text-decoration-line:  underline;
+}

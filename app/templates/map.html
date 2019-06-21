@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="map" style="height: 92vh;"></div>
+    <div class="john"> </div>
+
+    <button id='red' onclick="changeZoom()">
+            Vue sur le monde
+    </button>
+
+    <script>
+        // CONFIGURATION DE LA CARTE //
+        var map = L.map('map').setView([0, 0], 2);
+        
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+            
+        // ACTIONS SUR LA CARTE
+                        
+        function changeZoom() {
+            map.setZoom(2);
+            map.setView([0, 0]);
+                            
+        }
+            
+        function ajouteMarker(){
+            var marker = L.marker()
+            marker.bindPopup().openPopup();    
+                        
+        }
+
+        var marker;   
+            map.on('click', function(event){
+
+                if (marker == undefined) {
+            
+                    marker = L.marker(event.latlng)
+                    marker.addTo(map);
+                    console.log(event.latlng)
+                    marker.bindPopup("X: "+event.latlng.lng.toString()+" Y: "+event.latlng.lat.toString()).openPopup();
+                            }
+            
+                else {
+                    map.removeLayer(marker)
+                    marker = L.marker(event.latlng)
+                    marker.addTo(map);
+                    marker.bindPopup("X: "+event.latlng.lng.toString()+" Y: "+event.latlng.lat.toString()).openPopup();
+                }
+                        
+            });     
+
+        var jsonData = [
+        {% for user in users %}
+            {
+            "LNG": "{{ user.X }}",
+            "LAT": "{{ user.Y }}",
+            "SURNAME": "{{ user.surname }}",
+            "NAME": "{{ user.name }}",
+            "EMAIL": "{{ user.email }}"
+            },
+        {% endfor %}
+
+            ]
+            var addMarkers = function(point) {
+                L.marker([point.LAT, point.LNG])
+                .addTo(map)
+                .bindPopup(point.SURNAME+" "+point.NAME+" : "+ point.EMAIL);
+
+            };
+            jsonData.forEach(addMarkers);
+
+    </script>
+
+{% endblock %}
