@@ -29,4 +29,5 @@ Lancer l'application:
 
 
 Fait à partir du tuto:"https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates"
+
 par Bertochio Titouan
