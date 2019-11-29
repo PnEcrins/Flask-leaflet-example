@@ -38,4 +38,4 @@ Lancer l'application :
 
 **Auteur** : Titouan Bertochio / Juin 2019
 
-Réalisé à partir du tutoriel https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates
+Réalisé à partir du tutoriel https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
