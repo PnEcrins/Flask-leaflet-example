@@ -2,7 +2,7 @@
 
 Application Python Flask Leaflet comprenant un formulaire et une carte affichant les données saisies dans le formulaire.
 
-Créer une base de données PostgreSQL :
+Sur Linux Ubuntu, installer le moteur de base de données PostgreSQL :
 
 `sudo apt-get install postgresql`
 
